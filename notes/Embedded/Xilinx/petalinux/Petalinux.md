@@ -36,6 +36,8 @@ mount -t <format> <drive> <folder>
   vfat                                       # fat32
   ext4                                       # ext4
 tar -xzvf <.tar.gz> -C <folder>              # Untars the .tar.gz into <folder>
+
+ifconfig eth0 <ip> netmask <netmask>
 ```
 
 ## Boot SD Card
