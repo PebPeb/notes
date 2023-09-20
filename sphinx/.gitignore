@@ -1,0 +1,5 @@
+build/
+
+/source/*
+!/source/conf.py
+!/source/index.rst
