@@ -9,4 +9,5 @@ Kernel Object file or `.ko`. Allows for the dynamically adding and removing of f
 insmod
 modprobe
 rmmod
+lsmod
 ```

@@ -16,6 +16,13 @@ petalinux-package
 petalinux-util
 ```
 
+To see the current version of the kernel on your system 
+
+``` bash
+uname -r
+```
+
+
 ### Build Commands Example
 
 ``` bash
