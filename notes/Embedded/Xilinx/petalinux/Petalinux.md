@@ -35,6 +35,7 @@ petalinux-package --boot --fsbl zynq_fsbl.elf --u-boot --fpga system.bit --force
 ```
 
 ``` bash
+petalinux-create -t modules \--name mymodule \--enable
 petalinux-build -c myapp -x do_clean                               # For compiling .ko
 ```
 ./build/tmp/sysroots-components/zynq_generic/mymodule/lib/modules/5.15.19-xilinx-v2022.1/extra/mymodule.ko
