@@ -13,3 +13,4 @@ The difference is that block devices have a buffer for requests, so they can cho
 mknod
 ```
 
+
