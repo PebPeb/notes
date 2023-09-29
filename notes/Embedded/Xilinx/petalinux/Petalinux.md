@@ -32,6 +32,7 @@ petalinux-config -c kernel                                         # ¯\_(ツ)_/
 petalinux-config -c rootfs
 petalinux-build                                                    # Building project
 petalinux-package --boot --fsbl zynq_fsbl.elf --u-boot --fpga system.bit --force
+petalinux-boot --qemu --kernel
 ```
 
 ``` bash
