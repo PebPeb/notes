@@ -37,8 +37,9 @@ petalinux-boot --qemu --kernel
 
 ``` bash
 petalinux-create -t modules \--name mymodule \--enable
-petalinux-build -c myapp
-petalinux-build -c myapp -x do_clean                               # For compiling .ko
+petalinux-build -c mymodule
+petalinux-build -c mymodule -x do_clean                               # For compiling .ko
+petalinux-package --bsp -p . -o <output.bsp> --hwsource <hw.xsa>
 ```
 ./build/tmp/sysroots-components/zynq_generic/mymodule/lib/modules/5.15.19-xilinx-v2022.1/extra/mymodule.ko
 
