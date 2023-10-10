@@ -15,3 +15,11 @@ That gives you details about what system calls a program is making
 ``` bash
 strace ./<compiled_program>
 ```
+
+## Reading Kernel Outputs
+
+``` bash
+dmesg
+cat /var/log/kern.log
+```
+
