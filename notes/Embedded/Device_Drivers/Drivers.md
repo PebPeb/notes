@@ -14,6 +14,12 @@ Notice the column of numbers separated by a comma. The first number is called th
 
 The minor number is used by the driver to distinguish between the various hardware it controls. Returning to the example above, although all three devices are handled by the same driver they have unique minor numbers because the driver sees them as being different pieces of hardware.
 
+## File Operations
+
+The file_operations structure is defined in include/linux/fs.h, and holds pointers to functions defined by the driver that perform various operations on the device. Each field of the structure corresponds to the address of some function defined by the driver to handle a requested operation.
+
+
+
 ## Character devices and Block devices
 
 The difference is that block devices have a buffer for requests, so they can choose the best order in which to respond to the requests.
