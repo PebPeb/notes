@@ -39,3 +39,11 @@ Char devices are accessed through device files, usually located in /dev. Adding 
   In this function the unsigned int major is the major number you want to request, *const char \*name* is the name of the device as it will appear in /proc/devices and *struct file_operations \*fops* is a pointer to the *file_operations* table for the driver. Note that we didn’t pass the minor number to *register_chrdev* . That is because the kernel doesn’t care about the minor number; only the driver uses it.
 
   To avoid hijacking a reserved major number by the kernel the kernel can assign one dynamically. Passing in **0** as the major number will result in the kernel dynamically allocating a major number to driver.
+
+## Talking to Device Files
+
+*device write*
+*ioctl* Input Output Control
+
+
+
