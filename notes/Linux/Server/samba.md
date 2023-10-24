@@ -12,7 +12,7 @@ sudo apt install samba
 
 2) Configuring For Windows
 
-After Samba is installed it should create a configuration file located in you root directory `/etc/dev/smb.conf`. There are other configuration files that samba can use though for simplicity this example is using  this one. 
+After Samba is installed it should create a configuration file located in you root directory `/etc/samba/smb.conf`. There are other configuration files that samba can use though for simplicity this example is using  this one. 
 
 Add the following to the ***global*** section to enable support for windows.
 
@@ -47,7 +47,7 @@ sudo smbpasswd -a <user>
 
 6) Restart Service
 
-```
+``` bash
 sudo systemctl restart smbd.service
 ```
 
