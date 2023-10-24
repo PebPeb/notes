@@ -1,6 +1,19 @@
 
 # Petalinux
 
+## Setting up Petalinux in Ubuntu 18.04.4 VM
+
+``` bash
+sudo apt install gawk
+sudo apt-get install net-tools xterm autoconf libtool texinfo zlib1g-dev gcc-multilib build-essential libncurses5-dev zlib1g:i386
+./petalinux-v2022.1-04191534-installer.run
+sudo dpkg-reconfigure dash                                        # Select NO
+```
+
+...
+
+## Using Petalinux 
+
 Default username: petalinux
 
 ## Petalinux Commands
