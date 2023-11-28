@@ -9,6 +9,8 @@
 git checkout <branch-name>
 git config -l                              # Git configs
 
+git branch                                 
+git fetch                                  # Gits all the changes from the repo/branches
 ```
 
 
