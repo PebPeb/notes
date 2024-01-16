@@ -65,7 +65,7 @@ ifconfig eth0 <ip> netmask <netmask>
 
 ## Boot SD Card
 
-(partion names don't matter)
+(partition names don't matter)
 
 Disk
 .
