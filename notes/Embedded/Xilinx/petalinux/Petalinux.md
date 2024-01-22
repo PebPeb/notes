@@ -71,7 +71,7 @@ Disk
 .
 +-- _ROOT(fat32)
 |   +-- BOOT.BIN
-|   +-- boot.src
+|   +-- boot.scr
 |   +-- image.ub
 +-- _LINUX(ext4)
 |   +-- <extracted rootfs.tar.gz>
