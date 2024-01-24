@@ -69,11 +69,11 @@ ifconfig eth0 <ip> netmask <netmask>
 
 Disk
 .
-+-- _ROOT(fat32)
++-- _boot(fat32)
 |   +-- BOOT.BIN
 |   +-- boot.scr
 |   +-- image.ub
-+-- _LINUX(ext4)
++-- _root(ext4)
 |   +-- <extracted rootfs.tar.gz>
 
 
