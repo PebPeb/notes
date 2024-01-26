@@ -99,3 +99,8 @@ wg-quick down <name_of_config>
 
 After this you should have access to the wireguard network defined in the configuration files.
 
+## Wireguard Commands
+
+``` bash
+wg                                   # Shows the active connections and peers
+```
