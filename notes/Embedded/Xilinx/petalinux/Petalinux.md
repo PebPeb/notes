@@ -40,6 +40,9 @@ petalinux-build                                                    # Building pr
 petalinux-package --boot --fsbl zynq_fsbl.elf --u-boot --fpga system.bit --force
 petalinux-boot --qemu --kernel
 ```
+**note**
+Make sure in `petalinux-config` the YOCTO_MACHINE_NAME is correct.
+  - zcu111: *xilinx-zcu111*
 
 ``` bash
 petalinux-create -t modules \--name mymodule \--enable
