@@ -51,8 +51,8 @@ sudo smbpasswd -a <user>
 sudo systemctl restart smbd.service
 ```
 
-7) Connecting on Windows
+7) Connecting
 
-`\\<ip>\shared_folder_name`
+On Windows use the following `\\<ip>\shared_folder_name` and for Linux use `smb://<ip>/shared_folder_name`.
 
 Connect with the credentials set up with the *smbpasswd* command.
