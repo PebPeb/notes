@@ -1,6 +1,8 @@
 
 
-
+``` bash
+ssh-keygen -R <ip>  # Removing host from known_hosts
+```
 
 
 ## Kernel
