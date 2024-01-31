@@ -113,12 +113,26 @@ build
 
 ## Flashing already running board with new .bin
 
-FPGA manager must be enabled for this to work
+FPGA manager must be enabled for this to work. All the needed files for this process should be provided in the `images/linux` build directory.
 
 ``` bash
+# Also need to add the device tree overlay
 echo <fpga.bin> > /sys/class/fpga_manager/fpga0/firmware
 ```
 
+### Building the .bin
+
+``` bash
+bootgen -image Full_Bitstream.bif -arch zynqmp -process_bitstream bin
+```
+
+Full_Bitstream.bif file contains:
+``` 
+all:
+{
+  system.bit
+}
+```
 
 #### tmp
 
