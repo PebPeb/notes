@@ -120,6 +120,27 @@ FPGA manager must be enabled for this to work. All the needed files for this pro
 echo <fpga.bin> > /sys/class/fpga_manager/fpga0/firmware
 ```
 
+Flashing the board and adding the new device tree blob overlay
+
+``` bash
+# Clear the flag
+sudo sh -c "echo 0 > /sys/class/fpga_manager/fpga0/flags"
+
+# Configure folders
+sudo mkdir -p /lib/firmware
+sudo cp *.dtbo /lib/firmware/
+sudo cp *.bit.bin /lib/firmware/
+
+sudo mkdir /configfs
+sudo mount -t configfs configfs /configfs
+sudo mkdir /configfs/device-tree/overlays/full
+
+# Adding new overlay for linux
+sudo sh -c "echo -n /home/zcu111/pl.dtbo > /configfs/device-tree/overlays/full/path"
+# Flashing FPGA with new bin
+sudo sh -c "echo system.bit.bin > /sys/class/fpga_manager/fpga0/firmware"
+```
+
 ### Building the .bin
 
 ``` bash
@@ -132,6 +153,13 @@ all:
 {
   system.bit
 }
+```
+
+### Rebuilding the pl.dtbo
+
+``` bash
+petalinux-config --get-hw-description=<.xsa> 
+petalinux-build -c device-tree
 ```
 
 #### tmp
