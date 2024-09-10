@@ -69,6 +69,9 @@ project = 'notes'
 copyright = '2023, Bryce Keen'
 author = 'Bryce Keen'
 
+latex_engine = 'xelatex'  # or 'lualatex'
+
+
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
