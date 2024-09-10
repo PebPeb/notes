@@ -2,4 +2,4 @@ build/
 
 /source/*
 !/source/conf.py
-!/source/index.rst
+!/source/index.rst.tmpl
