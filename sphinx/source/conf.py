@@ -5,8 +5,9 @@
 
 import sphinx_rtd_theme
 import recommonmark
-from recommonmark.transform import AutoStructify
 import os
+from jinja2 import Environment, FileSystemLoader
+from recommonmark.transform import AutoStructify
 
 
 target_dir = './../../notes'
@@ -25,6 +26,37 @@ except PermissionError:
 except OSError as e:
     print(f"Error: {e}")
 
+
+# ============================================================================
+# Building Index File
+# ============================================================================
+
+project_name = "My Notes"  # Replace with your project's name
+source_dir = './notes'       
+template_file = 'index.rst.tmpl'
+output_file = './index.rst'
+
+env = Environment(loader=FileSystemLoader('.'))
+template = env.get_template(template_file)
+
+def find_files(directory):
+    for root, _, files in os.walk(directory):
+        for file in files:
+            if file.endswith(('.rst', '.md')) and file != 'index.rst':
+                relative_path = os.path.relpath(os.path.join(root, file), directory)
+                # Replace backslashes with forward slashes for Sphinx compatibility
+                yield relative_path.replace('\\', '/')
+
+files = sorted(find_files(source_dir))
+
+# Render the template with context
+rendered_content = template.render(project_name=project_name, files=files)
+
+# Write the rendered content to index.rst
+with open(output_file, 'w') as f:
+    f.write(rendered_content)
+
+print(f"Generated {output_file} successfully.")
 
 # ============================================================================
 # Sphinx Implimentation
