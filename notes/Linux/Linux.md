@@ -4,6 +4,13 @@
 ssh-keygen -R <ip>  # Removing host from known_hosts
 ```
 
+## New Users
+
+``` bash
+sudo adduser <new_user>
+sudo adduser --shell /bin/false <new_user>      # Without shell access 
+sudo deluser <user>
+```
 
 ## Kernel
 
