@@ -1,4 +1,7 @@
 
+# Linux
+
+## SSH Helpful Commands
 
 ``` bash
 ssh-keygen -R <ip>  # Removing host from known_hosts
@@ -27,4 +30,23 @@ To list drives and partitions use the following. After listing the partitions `f
 ``` bash
 lsblk
 sudo fdisk /dev/<partition>
+```
+
+
+## Miscellaneous Commands
+
+### Neofetch
+
+Fancy way of returning system information
+
+``` bash
+neofetch
+```
+
+### btop
+
+A more fancy top
+
+``` bash
+btop
 ```
