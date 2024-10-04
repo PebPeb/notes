@@ -7,3 +7,4 @@ Computer Architecture Notes
     :maxdepth: 1
 
     Chapter_1
+    Superscalar
