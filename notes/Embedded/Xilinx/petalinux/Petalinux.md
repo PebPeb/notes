@@ -43,6 +43,7 @@ petalinux-boot --qemu --kernel
 **note**
 Make sure in `petalinux-config` the YOCTO_MACHINE_NAME is correct.
   - zcu111: *xilinx-zcu111*
+  - Zybo Z7-20: *zynq-generic*
 
 ``` bash
 petalinux-create -t modules \--name mymodule \--enable
