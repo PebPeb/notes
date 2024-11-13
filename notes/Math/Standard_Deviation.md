@@ -2,7 +2,8 @@
 
 Is the measure of variation of values of a variable about its mean. A low value mean the average tends to the mean and a high value indicates the values are spread out.
 
-![Standard Deviation](./assets/StandardDeviation.png)
+<img src="./assets/StandardDeviation.png" alt="Standard Deviation" width="50%" style="float:right; margin-left: 15px;"/>
+
 
 $x_i$ = Individual Data Point\
 $N$ = Number of Data Points\
