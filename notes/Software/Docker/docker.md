@@ -2,7 +2,9 @@
 # Docker
 
 
-Commands for docker images
+# Images
+
+Commands for working with images
 
 ``` bash
 docker images
@@ -11,18 +13,25 @@ docker image prune
 docker build -t <image_name> <Dockerfile_dir>
 ```
 
-Commands for docker containers
+## Containers 
+### Running Container
 
-``` bash 
+- `docker run <args> <image_name>`: Builds and starts a container from the image
+  - `--name <container_name>`: Sets custom name for container
+  - `-d`: Runs the container in detached mode
+  - `-p <host_port>:<container_port>`: Maps port from host computer to port in the container
+  - `-v <host_path>:<container_path>`: Mounts a host directory into the container
+  - `/bin/bash`: Opens a bash shell inside the container (this goes after `<image_name>`)
 
-docker ps
-docker ps -a
-docker rm <container_name_or_ID>
+### Working with Containers
 
-docker start <container_name_or_ID>
-docker stop <container_name_or_ID>
+Commands for working with docker containers
 
-```
+- `docker ps`: Shows only running containers
+- `docker ps -a`: Shows all containers, including stopped ones
+- `docker rm <container_name_or_ID>`
+- `docker start <container_name_or_ID>`
+- `docker stop <container_name_or_ID>`
 
 
 ## Example
