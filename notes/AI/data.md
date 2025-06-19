@@ -11,6 +11,8 @@
 
 Data is key to the success of modern day models
 
+- Tabular Data
+
 ## Objective Functions
 
 Tells how good or bad a model is preforming.
