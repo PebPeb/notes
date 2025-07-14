@@ -38,5 +38,7 @@ The *rectified linear unit*
 
 ### Sigmoid Function
 
+...
 
+## Propagation
 
