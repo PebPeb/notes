@@ -1,6 +1,8 @@
 
 # Linux
 
+To tell what version of linux that is currently running the information is stored at `cat /etc/os-release`.
+
 ## SSH Helpful Commands
 
 ``` bash
