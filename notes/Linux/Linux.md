@@ -34,6 +34,18 @@ lsblk
 sudo fdisk /dev/<partition>
 ```
 
+After reading the outputs of the `lsblk` to un-mount a drive you can use the following command.
+
+``` bash
+umount /dev/<partition>
+```
+
+To example for reformating disks.
+
+``` bash
+sudo mkfs.vfat -F 32 /dev/<partition>   # FAT32
+```
+
 
 ## Miscellaneous Commands
 
