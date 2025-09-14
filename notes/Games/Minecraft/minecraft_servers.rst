@@ -49,4 +49,9 @@ for the minecraft server and from there you can interact with it.
 .. note::
 	**IMPORTANT** -- To exit the screen you must do ctrl+A then D
 
+--------------
+Service Config
+--------------
+
+The service can be found in `/etc/systemd/system/minecraft@.service`
 
