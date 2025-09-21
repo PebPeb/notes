@@ -16,19 +16,31 @@ Host <alias>
     IdentityFile <pathToKey>
 ```
 
+The `IdentifyFile` is the private key not the public key. The public key is denoted with `.pub`, and the public key is what is shared with the server from the client.
+
 Within the config file the *IdentityFile* tag is referring to the ssh key on the local host. If a key has already been generated then you should be able to find it in either the local or global ssh directories. If there is no key then a key will need to be generated. After the key is generated it will need to be shared with the server.
 
 ``` bash
 ssh-keygen                              # Generates the key
-ssh-copy-id -i <pathToKey> user@host    # Copy key to server
+ssh-copy-id -i <pathToKey>.pub user@host    # Copy key to server
 ```
 
-After a key has been shared with the server it is as simple as using the ssh command to 
-connect.
+After a key has been shared with the server it is as simple as using the ssh command to connect.
 
 ``` bash
 ssh <alias>
 ```
+
+## Manually Moving Keys
+
+In case the case of having to manually copy the key on the server side because `ssh-copy-id` is not available. The contents of the **public** key on the client side must be copied to the `.ssh/authorized_keys` file on the server side. The `authorized_keys` file can have multiple keys copied to it, and the file can be created if it is missing from the desired ssh directory. 
+
+Example for what it would look like to copy the public key to the authorized_keys.
+
+``` bash
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC9vP9Xt7YX+3VJXwJ5z0z4O7LtU9ZGqkR8ZtPS6nLgZFxBt7uU4X9aBqJxDLqK8GwT/YKwNgy1mFY56uFqLreVvZhYwZ1dG5Z8zyx2+S+1+Ee3tNQaZ9B6LCu+OjNUU3IxT1VpDdT6cI+avJgB8zq3GVlRxY6jGjvnImw7N0DZ5Sb3dMLkRoLVRV9FvIqzQgqZBzU6wDvnA7UMbbNdwP3vOfRzLzkHF8X example@fakemachine
+```
+
 
 ## Generating Specific Key Types
 
@@ -41,3 +53,5 @@ ssh-keygent -t RSA -C "my@email.com"         # 2048, 3072, & 4096 bits
 ```
 
 There are many more key types but these are the most likely to be encountered.
+
+
