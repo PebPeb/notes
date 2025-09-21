@@ -3,6 +3,19 @@
 
 To tell what version of linux that is currently running the information is stored at `cat /etc/os-release`.
 
+## Networking
+
+```bash
+ifconfig
+```
+
+Setting up a alias for a specific IP address is as simple as modifying the `/etc/hosts` file. To do so it is as simple as adding the IP address then the name that you would like to use. 
+
+``` bash
+127.0.0.1 localhost
+```
+
+
 ## Sudo User
 
 To run all commands a sudo user. Only use when it is a must very easy to mess something up with ultimate power. Or if you are a real man only ever use sudo user because restraints are for the weak.
