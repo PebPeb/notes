@@ -14,4 +14,5 @@
 - Autoregressive
 - Variational autoencoders
 - Diffusion Models
+- Transformer-based
 
