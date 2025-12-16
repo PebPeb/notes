@@ -1,8 +1,3 @@
-
-
-- *Label* - Is the target of a model so for example if the model is trying to predict what the image is of then the label would be what that image is (A picture of a cat would be cat). 
-- *Feature* - Is the numerical data that makes up the 
-
 # Data in AI
 
 - **Dimensionality** - Is the length of the numerical features of the input vectors

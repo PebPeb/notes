@@ -57,3 +57,5 @@ $$\tanh(x)=\frac{1-e^{-2x}}{1+e^{-2x}}$$
 
 ## Propagation
 
+### Forward Propagation
+

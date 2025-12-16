@@ -3,8 +3,7 @@
 
 The goal is for the 
 
-
-![alt text](gan_diagram.png)
+![alt text](assets/gan_diagram.png)
 
 ## Generator (G)
 
