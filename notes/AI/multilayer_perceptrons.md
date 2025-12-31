@@ -9,8 +9,8 @@ A multilayer perceptron is stacking multiple layers on top of one another. With 
 Since the input layer does not preform any calculations in it the image above is depicting a two layer MLP. Every neuron influences every neuron of the layer below it.
 
 
-$n =$ number of examples \
-$d =$ number of input features \
+$n =$ number of examples (batch size) \
+$d =$ number of inputs (features) \
 $X \in \mathbb{R}^{n \times d}$
 
 $h =$ number of hidden representations (units) \

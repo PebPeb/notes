@@ -1,4 +1,4 @@
-# Tcl commands for Simulation
+# Tcl commands for Simulation Filesets
 
 
 ```tcl
@@ -19,3 +19,16 @@ set_property SOURCE_SET {} [get_filesets <name>]
 ## Updating file set
 
 update_compile_order -fileset <name>
+
+
+# Simulating with XSIM
+
+There are multiple ways to use `XSIM` stand alone.
+
+## Parsing
+
+- **xvhdl**: Parses VHDL
+- **xvlog**: Parses Verilog
+- **xvlog -sv**: Parses SystemVerilog
+
+After parsing by default this will create a simulation working file. 
