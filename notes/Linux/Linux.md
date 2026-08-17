@@ -3,6 +3,8 @@
 
 To tell what version of linux that is currently running the information is stored at `cat /etc/os-release`.
 
+[Official Kernel Documentation](https://docs.kernel.org/)
+
 ## Networking
 
 ```bash
