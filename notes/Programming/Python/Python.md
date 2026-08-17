@@ -17,6 +17,50 @@ source ~/.venv/<env_name>/bin/active
 
 This is an example in reality the virtual environment may be located in a different directory.
 
+## Decorator
+
+What is a decorator? It is a short hand to "wrap" another function to extend its behavior.
+
+``` python
+@test
+def my_function()
+  pass
+```
+
+Above is the exact same way of saying the following.
+
+``` python
+def my_function()
+  pass
+
+my_function = test(my_function)
+```
+
+Example of creating a custom decorator.
+
+``` python
+def test(func):
+    def wrapper():
+        print(f"Testing the function: {func.__name__}")
+        func()
+        print("Test complete!")
+    return wrapper
+
+@test
+def say_hello():
+    print("Hello World!")
+
+say_hello()
+```
+
+```
+Testing the function: say_hello
+Hello World!
+Test complete!
+```
+
+
+
 
 ## [Asynchronous I/O (asyncio)](https://docs.python.org/3/library/asyncio-runner.html)
 
