@@ -39,6 +39,33 @@ clk = dut.clk
 count = dut.inst_sub_block.count
 ```
 
+### Makefile
+
+``` Makefile
+SIM ?= verilator
+
+# Python files
+PYTHON_FILES = <file_name>.py
+
+# Verilog files
+VERILOG_SOURCES = <file_name>.v
+
+# Test to run. This is the name of the test in the testbench
+TEST ?= <testbench_name>
+
+# Cocotb variables
+#  - MODULE is the name of the python module the test is in
+#  - COCOTB_TEST_FILTER does not have to be used but is what tests in the python module to run
+#  - COCOTB_TOPLEVEL is the top level module of the design (this is not the testbench)
+MODULE = $(TEST)
+COCOTB_TEST_FILTER ?= <tests>
+COCOTB_TOPLEVEL = <top_module>
+COCOTB_REDUCED_LOG_FMT = 1
+
+# Include cocotb makefile
+include $(shell cocotb-config --makefiles)/Makefile.sim
+```
+
 ## [Coroutines and Tasks](https://docs.cocotb.org/en/stable/coroutines.html)
 
 Typically coroutines await a Trigger object which pauses the task, and indicates to the simulator some event which will cause the task to resume execution. For example:
@@ -56,6 +83,6 @@ async def wait_100ns():
     await wait_10ns()
 ```
 
-Coroutines can be scheduled for concurrent execution with start_soon(). These concurrently running coroutines are called Tasks.
+Coroutines can be scheduled for concurrent execution with [start_soon()](https://docs.cocotb.org/en/stable/writing_testbenches.html#concurrent-and-sequential-execution). These concurrently running coroutines are called Tasks.
 
 
