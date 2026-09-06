@@ -137,3 +137,22 @@ async def main():
   print(f"finished at {time.strftime('%X')}")
 ```
 
+## Exceptions
+
+
+
+``` python
+class VerificationError(Exception):
+  """Base exception for verification errors."""
+  pass
+
+class TimeoutError(VerificationError):
+  """Exception for timeouts."""
+  
+  def __init__(self, operation: str, timeout_ns: int) -> None:
+    """Initialize timeout error."""
+    self.operation = operation
+    self.timeout_ns = timeout_ns
+    super().__init__(f"Timeout in {operation} after {timeout_ns}ns")
+
+```
